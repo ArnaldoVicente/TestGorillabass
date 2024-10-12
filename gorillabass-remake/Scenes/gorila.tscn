@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctgah5for2qaj"]
+
+[ext_resource type="Texture2D" uid="uid://j0w8n11560x1" path="res://Assets/Gorila.png" id="2_lton1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vfixl"]
+size = Vector2(29.5, 32)
+
+[node name="Gorila" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(63, 97.25)
+scale = Vector2(0.133891, 0.150655)
+texture = ExtResource("2_lton1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(63.25, 98)
+shape = SubResource("RectangleShape2D_vfixl")

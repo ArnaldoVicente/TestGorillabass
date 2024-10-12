@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfahjkvhdkkfu"]
+
+[ext_resource type="Texture2D" uid="uid://jb7a2i6ndpjm" path="res://Assets/Banana.png" id="1_q4rn2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2d2u6"]
+size = Vector2(25, 21)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(115.5, 80.25)
+scale = Vector2(0.110656, 0.103687)
+texture = ExtResource("1_q4rn2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(115.5, 80.5)
+shape = SubResource("RectangleShape2D_2d2u6")

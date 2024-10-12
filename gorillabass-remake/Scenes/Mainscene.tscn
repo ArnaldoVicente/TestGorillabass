@@ -1,0 +1,115 @@
+[gd_scene load_steps=11 format=3 uid="uid://ciakx3rnab7ni"]
+
+[ext_resource type="Texture2D" uid="uid://cf7g42lscd1cn" path="res://Assets/night-city-game-background-2d-260nw-499632760.png" id="1_3lxty"]
+[ext_resource type="Script" path="res://Scenes/mainscene.gd" id="1_jp1io"]
+[ext_resource type="PackedScene" uid="uid://ctgah5for2qaj" path="res://Scenes/gorila.tscn" id="2_0hyyk"]
+[ext_resource type="Texture2D" uid="uid://dc4xwtbwwaqu6" path="res://Assets/Captura de tela 2024-09-27 100501.png" id="3_f06ys"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hmd4f"]
+size = Vector2(131.5, 125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_78p8d"]
+size = Vector2(83, 309)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p7u4i"]
+size = Vector2(48, 402)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kchpb"]
+size = Vector2(111.5, 291)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tm0fy"]
+size = Vector2(89, 212)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_73fhe"]
+size = Vector2(94, 442)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_jp1io")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(577.5, 340.879)
+scale = Vector2(2.72066, 2.68388)
+texture = ExtResource("1_3lxty")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(68.25, 466.5)
+shape = SubResource("RectangleShape2D_hmd4f")
+
+[node name="Gorila" parent="." instance=ExtResource("2_0hyyk")]
+position = Vector2(-3, 291)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(178.5, 452.5)
+shape = SubResource("RectangleShape2D_78p8d")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(344, 406)
+shape = SubResource("RectangleShape2D_p7u4i")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(921.25, 465.5)
+shape = SubResource("RectangleShape2D_kchpb")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2(1082.5, 507)
+shape = SubResource("RectangleShape2D_tm0fy")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D6"]
+position = Vector2(644, 345.5)
+scale = Vector2(1, 1.33212)
+texture = ExtResource("3_f06ys")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2(643, 385)
+shape = SubResource("RectangleShape2D_73fhe")
+
+[node name="Gorila2" parent="." instance=ExtResource("2_0hyyk")]
+position = Vector2(1021, 287)
+
+[node name="ForceInput" type="LineEdit" parent="."]
+offset_left = 29.0
+offset_top = 23.0
+offset_right = 133.0
+offset_bottom = 68.0
+
+[node name="Label" type="Label" parent="ForceInput"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = -23.0
+offset_right = 87.0
+offset_bottom = 1.0
+text = "Força"
+
+[node name="AngleInput" type="LineEdit" parent="."]
+offset_left = 172.0
+offset_top = 23.0
+offset_right = 282.0
+offset_bottom = 68.0
+
+[node name="Label" type="Label" parent="AngleInput"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = -23.0
+offset_right = 132.0
+offset_bottom = 17.0
+text = "Angulo"
+
+[node name="LaunchButton" type="Button" parent="."]
+offset_left = 80.0
+offset_top = 90.0
+offset_right = 213.0
+offset_bottom = 145.0
+action_mode = 0
+text = "Lançar"
